@@ -1,0 +1,112 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: #333;
+    color: white;
+    font-family: sans-serif;
+}
+body .container{
+    display: grid;
+    grid-template-columns: 5fr 3fr;
+    background-color: #222;
+    width: 80vw;
+    margin: auto;
+    border-radius:10px ;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+@media (max-width: 992px) {
+    body .container {
+        grid-template-columns: 4fr 3fr;
+        width: 90vw;
+    }
+    body .container .filters ul li.control a , .control span{
+        width: 90px;
+    }
+    
+}
+
+@media (max-width: 768px) {
+    body .container {
+        grid-template-columns: 1fr;
+    }
+    body .container .img .image-box{
+        width: 100%;
+    }
+    body .container .img .image-box canvas{
+        width: 100%;
+    }
+    .upload{
+        margin: 20px auto;
+    }
+}
+
+body .container .img{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+body .container .img .image-box img{
+    max-width: 45vw;
+    max-height: 60vh;
+}
+body .container .img .upload label{
+    border: 2px dashed white;
+    padding: 10px 20px;
+}
+body .container .img .upload input{
+    display: none;
+
+}
+
+body .container .filters ul{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+}
+body .container .filters ul li{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+body .container .filters ul li label{
+    margin-bottom: 5px;
+}
+
+body .container .filters ul li.control{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+body .container .filters ul li.control a , .control span{
+    background-color: #28a745;
+    padding:10px 15px ;
+    border-radius: 2px;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    transition: 0.3s;
+    text-decoration: none;
+    color: white;
+}
+body .container .filters ul li.control a:hover{
+    background-color: #218739;
+}
+.control span{
+    background-color: #dc3545;
+    transition: 0.3s;
+}
+.control span:hover{
+    background-color: #ae2a38;
+}
